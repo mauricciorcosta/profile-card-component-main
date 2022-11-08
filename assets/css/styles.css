@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Fonts */
+    --text: 'Kumbh Sans', sans-serif;
+
+    /* Colors */
+    --darkCyan: #19a2ae;
+    --veryDarkBlue: #2d3248;
+    --darkGrayishBlue: #6a6f81;
+    --darkGray: #969696;
+    --line: #96969685;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--text);
+    font-size: 18px;
+    background-color: var(--darkCyan);
+    text-align: center;
+    z-index: 0;
+}
+
+.bgt, .bgb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.top {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    top: -30%;
+    left: -85%;
+    scale: 2;
+    background-image: url("../img/bg-pattern-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 55%;
+    left: 45%;
+    background-image: url("../img/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.container {
+    z-index: 1;
+}
+
+.card {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.avatar {
+    border: 5px solid white;
+    border-radius: 100%;
+    position: absolute;
+    top: 34%;
+    left: 36.5%;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.info div {
+    display: flex;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--veryDarkBlue);
+    margin-bottom: .5em;
+}
+
+.age {
+    font-size: 1.5rem;
+    margin-left: .5em;
+    color: var(--darkGrayishBlue);
+}
+
+.place {
+    color: var(--darkGrayishBlue);
+    margin-bottom: 1em;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em;
+    border-top: 1px solid var(--line);
+}
+
+.number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--veryDarkBlue);
+}
+
+@media screen and (min-width: 992px) {
+    .top {
+        top: -150%;
+        left: -100%;
+    }
+
+    .avatar {
+        top: 30%;
+        left: 45%;
+    }
+}
